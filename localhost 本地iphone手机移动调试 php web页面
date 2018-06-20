@@ -1,0 +1,27 @@
+localhost 本地iphone手机移动调试 php web页面
+
+http://192.168.3.127:63342/Views/position/detail/m1/m1.html
+
+注意  
+	我们使用phpstorm 建立web服务  使用php 开发业务功能
+
+	但是静态页面 css html js 需要调试 
+
+	除了mac 端调试
+
+	还要手机safari调试
+
+	以前成功调试  最近又要调试 总不成功
+
+	原来搞错了 phpstorm 建立web服务时的配置文件 我们一直以为配置文件localhost
+
+	然后我们在手机wifi 添加对应 mac的 ip地址代理 端口号 和 web服务端口号对应就行
+
+	后来一直不行 最后发现 phpstorm 建立web服务时 配置文件 要将localhost 改为 mac的真实ip地址 才可以 iphone手机远程调试页面
+
+	localhost 和 mac真实的ip地址 没有映射路由 因此  这里php 启动web服务时 将配置文件localhost 改为真实ip地址绑定
+
+	/usr/local/Cellar/php70/7.0.12_5/bin/php -S 192.168.3.127:63342 -t /Users/admindyn/Desktop/gitspace/20170921weixingongzhonghao/phpbase
+	
+
+	特此记录 一些细节浪费时间
