@@ -157,6 +157,17 @@ console.log(Object.prototype.toString.call(f));
          * 这个属性只有函数有
          * */
         function F(){}
+
+        /*
+        *
+        * 这里选择一个空 构造函数 实例的对象 作为 中转 原型对象
+        *
+        * F()的一个实例，那这个实例会有一个_proto指针，这个指针指向父类的prototype原型对象,
+        *
+        * 原型链建立
+
+        * */
+
         F.prototype = Super.prototype;
         Sub.prototype = new F();
         Sub.prototype.constructor = Sub;
@@ -218,6 +229,10 @@ console.log(Object.prototype.toString.call(f));
     worker.doWork();   //Worker类中自己定义的
     worker.test();
 
+    console.dir(worker);
+
+    console.dir(Worker);
+
     window.mymodule = {
         inherit : inherit,
         Person : Person,
@@ -229,4 +244,76 @@ console.log(Object.prototype.toString.call(f));
 var worker = new window.mymodule.Worker("moduler test",40,"hahaha",["OC","Python","C"]);
 
 worker.doWork();
+
+
+
+console.log(Object.prototype.toString.call(worker));
+
+
+function Y2Y(age){
+
+    this.age = age;
+}
+
+
+function T2T(speciality){
+
+    this.speciality = speciality;
+}
+
+function update(Sub,Super){
+    /*
+     * 思考 这里通过空函数作为继承原型的中转 说到空对象 为什么没有用Object 或字面量对象{} 而用一个空函数 对象
+     *
+     * 原因在于这里 需要用到prototype 关联原型 函数向上查找的特点
+     *
+     * 这个属性只有函数有
+     * */
+    function F(){}
+
+    /*
+     *
+     * 这里选择一个空 构造函数 实例的对象 作为 中转 原型对象
+     *
+     * F()的一个实例，那这个实例会有一个_proto指针，这个指针指向父类的prototype原型对象,
+     *
+     * 原型链建立
+
+     * */
+
+/*
+* 这里是对比 原型链建立
+* */
+    F.prototype = Super.prototype;
+    Sub.prototype = new F();
+    /*
+    *
+    *
+    * */
+    /*
+    * 这里是给空构造函数F 实例的对象 添加了一个constructor属性 原本对象是没有这个属性
+    *
+    * 一个原型链 一个节点需要一个constructor
+    * 也就是说 一个任意对象经过这样被构造函数原型指引 并且自己添加constructor指引该构造函数 可改造为原型对象
+    * 这里使用空对象是为了 资源利用
+    *
+    *
+    * */
+    Sub.prototype.constructor = Sub;
+    /*
+    *
+    * */
+
+}
+
+update(T2T,Y2Y);
+
+var g = new T2T("special");
+
+console.dir(g);
+
+
+
+
+
 
