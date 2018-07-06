@@ -1,0 +1,287 @@
+@media screen and (min-width: 600px){
+    /* 这里定义了当屏幕宽度大于等于600px时触发的CSS定义 */
+    body{
+        background-color: whitesmoke;
+    }
+
+}
+
+@media screen and (max-width: 599px){
+    /* 定义了屏幕小于等于599px时触发的CSS定义 */
+    body{
+        background-color: cornflowerblue;
+    }
+}
+
+
+.center_inline{
+    /*
+    该css 要加给 要居中的行内元素的 父级元素
+    */
+    text-align: center;
+}
+.center_block{
+    /*
+   该css 要加给 要居中的块级元素自身 并且设置的是 左右外边距auto
+   */
+   margin: 10px auto;
+    width:400px;
+    background-color: #00adb4;
+}
+.center_blocks{
+    /*
+    多个块状元素水平排列居中
+    */
+    text-align: center;
+}
+.block_2{
+    /*
+    这里行内块状元素 居中 如果两个块状元素的文本长度不同 有一点需要调整啊
+
+    就是inline-block 会将块状元素  定位方式 调整为相对定位
+    需要 调整为绝对定位 绝对定位 是兄弟元素 都相对父级元素 坐标计算 都以 相同标准定位
+    而相对定位 的坐标计算 就像垒积木
+    */
+    display: inline-block;
+    position: absolute;
+}
+.block_1{
+    display: inline-block;
+}
+.beauti_block1{
+    /*
+    元素美化
+    */
+    width: 100px;
+    background-color: #222;
+    height: 50px;
+    color: #FFF;
+    left: -20px;
+    padding: 10px;
+}
+.beauti_block2{
+    /*
+    元素美化
+    */
+    width: 100px;
+    background-color: #222;
+    height: 50px;
+    color: #FFF;
+    margin-left: 20px;
+    padding: 10px;
+}
+
+.container_block{
+    background-color: #59c7f9;
+    width: 400px;
+    /* 以下属性垂直居中 */
+    display: table-cell;
+    vertical-align:middle;
+
+    margin: 20px auto;
+
+    height: 300px;
+
+
+}
+.container_item1
+{
+    top: 0%;
+    /*
+
+    */
+    margin-top: 10px;
+
+
+    background-color: #999999;
+    position: relative;
+    padding: 0;
+
+
+}
+
+
+.container_block1{
+    background-color: #59c7f9;
+    width: 400px;
+
+
+    margin: 20px auto;
+
+    height: 300px;
+
+
+}
+.container_item2
+{
+    top: 50%;
+    /*
+    这里垂直居中 一般应该是当前居中块级元素的高度的一半
+    */
+    margin-top: -0px;
+    background-color: #999999;
+    position: relative;
+    padding: 0;
+
+
+}
+
+.container_block2{
+    background-color: #59c7f9;
+    width: 400px;
+
+
+    margin: 20px auto;
+
+
+
+
+}
+.container_item3
+{
+    top: 50%;
+    /*
+
+    */
+
+    background-color: #999999;
+    position: relative;
+    transform: translateY(-20%); /* 这里我们使用css3的transform来达到类似效果 */
+
+
+}
+.parent_block{
+
+    width: 400px;
+
+    background-color: #00adb4;
+
+    height: 200px;
+
+    margin: 20px ;
+
+}
+.children_block{
+
+    width: 800px;
+
+    height: 100px;
+
+    background-color: #a94442;
+}
+
+.box_normal{
+    width: 350px;
+    margin: 20px auto;
+    border: 1px solid #222;
+}
+.box_bold{
+    width:292px; /*修正宽度：350 - 20*2 - 10*2 + 1*2 = 292 */
+    padding: 20px;
+    margin: 20px auto;
+    border: 10px solid #DD4814;
+}
+.container_block_vertical
+{
+    background-color: #59c7f9;
+
+    border: 1px solid orange;
+    padding: 20px;
+
+}
+
+
+.fl_img1
+{
+
+    float:right; /* 定义这个图片属性，让它向右漂移*/
+    #clear: right;
+}
+
+.fl_img2{
+   /*用户缩放浏览器，图片始终会保持父元素的30%宽度*/
+    width: 30%;
+    float:right; /* 定义这个图片属性，让它向右漂移*/
+    #clear: right;
+}
+
+.container_float_over
+{
+    background-color: #59c7f9;
+    border: 1px solid green;
+    padding: 20px;
+
+}
+
+.clear_over{
+    overflow:auto;
+    /* 如果需要支持IE6，那么加入如下代码 */
+    #zoom: 1;
+}
+
+.layout_float{
+
+    width: 90px;
+    height: 50px;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px;
+
+    /*
+    这里进行浮动布局 两种方式
+    float 方式
+    inline-block 方式 这个是低版本浏览器使用的
+    */
+
+    float: left;
+    #display: inline-block;
+
+}
+.layout_float_after{
+    /*
+    这里是页脚
+    */
+    clear: both;
+}
+
+.container_inlineblock_layout{
+    border: 2px solid green;
+    position: relative;
+    width: 100%;
+}
+
+.nav_inline_float{
+    width:20%;
+
+    border: 1px solid pink;
+    /* inline-block布局 */
+    display: inline-block;
+    /*当布局区域高度不一致 来向上或向下对齐*/
+    vertical-align:top;
+}
+.other_inline_float{
+    width:70%;
+    border: 1px solid yellow;
+    /* inline-block布局 */
+    display: inline-block;
+    vertical-align:top;
+}
+
+.four_column{
+    /* 定义4个列 */
+    -webkit-column-count: 4;
+    -moz-column-count: 4;
+    column-count: 4;
+
+    /* 定义列之间距离 */
+    -webkit-column-gap: 10px;
+    -moz-column-gap: 10px;
+    column-gap: 10px;
+}
+
+.container_mutiple_column{
+    margin-top: 20px;
+    border: 2px solid pink;
+    position: relative;
+    width: 100%;
+}

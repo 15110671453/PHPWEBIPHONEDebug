@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>深入理解JavaScript</title>
+    <link rel="stylesheet" href="./test.css">
+    <script src="./test.js"></script>
+</head>
+<body>
+
+    <h1> 深入理解JavaScript </h1>
+
+    <h1>水平居中</h1>
+    <div style="text-align: center;">
+      <p>行内元素如何实现居中</p>
+        <nav>
+            <li>test1</li>
+            <li>test2</li>
+        </nav>
+    </div>
+
+    <div class="center_block">
+    块级元素居中 需要居中的元素需要设置固定的宽度 因为占据100%的宽度
+    </div>
+
+    <div class="center_blocks">
+
+        <div class="block_1 beauti_block1"><p>要将几个块状元素水平排列居中 需要将这几个块状元素设置为 inline-block</p></div>
+        <div class="block_2 beauti_block2"><p>元素美化</p></div>
+
+        
+    </div>
+    <h1>垂直居中</h1>
+
+    <div class="container_block">
+        <div>多行的行内元素居中 </div>
+
+        <a href=""> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis blanditiis optio accusamus quia sapiente at labore consectetur in quasi veritatis possimus quod nihil aliquam vero saepe rem quas. Ratione eligendi!</a>
+
+
+    </div>
+
+    <div class="container_block">
+        <div> 这里该垂直居中的是下面的 块状元素 条件是 第一 其父级元素设置 固定高度 ;第二 要居中的块级元素设置 绝对定位</div>
+
+
+        <div class="container_item1"> 我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛</div>
+
+    </div>
+
+    <div class="container_block1">
+        <div> 222这里该垂直居中的是下面的 块状元素 条件是 第一 其父级元素设置 固定高度 ;第二 要居中的块级元素设置 绝对定位</div>
+
+
+        <div class="container_item2"> 222我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛</div>
+
+
+    </div>
+
+
+    <div class="container_block2">
+        <div> 333这里该垂直居中的是下面的 块状元素 条件是 第一 其父级元素设置 固定高度 ;第二 要居中的块级元素设置 绝对定位</div>
+
+
+        <div class="container_item3"> 333我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛 我才是要居中的元素嘛</div>
+
+
+    </div>
+
+    <div class="parent_block clear_over">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In a ad natus qui pariatur libero magni odit sapiente nihil est fugiat illo doloremque sunt eos voluptate veniam nam vitae? Sunt.</p>
+
+        <div class="children_block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In a ad natus qui pariatur libero magni odit sapiente nihil est fugiat illo doloremque sunt eos voluptate veniam nam vitae? Sunt.</p>
+        </div>
+        <div>
+            这里不浮动 和 浮动 来设置 over 超出部分的 管理 发现不同
+        </div>
+    </div>
+
+<h1>盒子模型</h1>
+
+    <div>
+
+        <div class="box_normal"></div>
+
+        <div class="box_bold">
+
+
+        </div>
+
+    </div>
+
+    <div class="container_block_vertical">
+        <img class="fl_img1"  src="1.jpg" alt=""/>
+
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia adipisci labore ipsam ipsa porro maxime dolores qui enim. Quisquam fugit alias ullam obcaecati ducimus ipsam voluptate veniam expedita dolorem voluptatem omnis molestias error vero reprehenderit aliquid vel quod impedit delectus dolor quam deserunt consequuntur saepe at sit fugiat quasi libero hic eaque a debitis aut facilis velit accusamus quidem cupiditate quae commodi reiciendis iusto cumque quibusdam in est pariatur natus cum culpa nemo. Perferendis iusto asperiores aliquid praesentium et ex non sint odio placeat illo? Odio nisi laborum labore inventore at quae laudantium provident amet maiores ut repudiandae impedit dolores aut incidunt voluptatum rem possimus ipsam corrupti sit veniam quia dignissimos consequuntur eligendi vel consequatur blanditiis placeat nostrum beatae deleniti. Illum debitis iste sunt modi natus voluptatem quidem ea a fuga sapiente veniam deserunt praesentium quod iusto laboriosam porro dignissimos harum dolorum cum corrupti facilis repudiandae quibusdam asperiores quo tempora dolore velit maiores sint repellat ipsa nam alias placeat hic! Enim similique praesentium officiis qui nesciunt distinctio quia accusamus ea veritatis vel laudantium mollitia alias. Voluptatibus aperiam totam pariatur sit non sapiente rem atque quibusdam labore consectetur soluta reprehenderit alias magni facere minima blanditiis ex adipisci illum error vero. At distinctio autem doloribus vero blanditiis expedita laborum similique sapiente quod magni inventore animi suscipit nulla minima quibusdam. Sint ab itaque eos velit esse illo aut minima similique consectetur neque expedita odit alias animi doloribus fugit pariatur possimus. Cum nulla nam laborum deleniti amet sequi sapiente officiis voluptatem recusandae maxime nesciunt quibusdam explicabo eligendi. Perferendis dolor quidem fuga quibusdam earum veniam natus omnis magnam reiciendis eius quaerat eligendi doloribus fugit eos consequuntur quo tempore. Dolorem totam quaerat voluptatibus enim sequi eum magnam similique iure illo voluptas accusamus fugiat eaque quidem aperiam autem animi quod odio fugit porro aut culpa voluptates dicta.
+
+    </div>
+
+<h1>浮动元素超出父层</h1>
+
+
+    <div class="container_float_over clear_over">
+        <img  class="fl_img2" src="1.jpg" alt=""/>
+        <p> hello ya ya ayyyayyaya 段落元素高度小于图片高度 图片显示溢出</p>
+    </div>
+
+
+<h1>浮动布局</h1>
+
+    <div>
+
+        <div class="layout_float">div{内容测试}*13</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">div{内容测试}*13</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+        <div class="layout_float">内容测试</div>
+
+        <div class="layout_float_after"> 我在这里  准备页脚1</div>
+    </div>
+    <div> 我在这里  准备页脚2</div>
+
+    <div class="container_inlineblock_layout">
+
+        <nav class="nav_inline_float"><li>test1</li> <li>test2</li> <li>test3</li> <li>test4</li></nav>
+        <section class="other_inline_float"> 第一部分</section>
+
+
+
+    </div>
+
+    <div class="container_mutiple_column">
+        <div class="four_column">
+
+            <img class="fl_img2" src="1.jpg" alt="">
+            <p>        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia adipisci labore ipsam ipsa porro maxime dolores qui enim. Quisquam fugit alias ullam obcaecati ducimus ipsam voluptate veniam expedita dolorem voluptatem omnis molestias error vero reprehenderit aliquid vel quod impedit delectus dolor quam deserunt consequuntur saepe at sit fugiat quasi libero hic eaque a debitis aut facilis velit accusamus quidem cupiditate quae commodi reiciendis iusto cumque quibusdam in est pariatur natus cum culpa nemo. Perferendis iusto asperiores aliquid praesentium et ex non sint odio placeat illo? Odio nisi laborum labore inventore at quae laudantium provident amet maiores ut repudiandae impedit dolores aut incidunt voluptatum rem possimus ipsam corrupti sit veniam quia dignissimos consequuntur eligendi vel consequatur blanditiis placeat nostrum beatae deleniti. Illum debitis iste sunt modi natus voluptatem quidem ea a fuga sapiente veniam deserunt praesentium quod iusto laboriosam porro dignissimos harum dolorum cum corrupti facilis repudiandae quibusdam asperiores quo tempora dolore velit maiores sint repellat ipsa nam alias placeat hic! Enim similique praesentium officiis qui nesciunt distinctio quia accusamus ea veritatis vel laudantium mollitia alias. Voluptatibus aperiam totam pariatur sit non sapiente rem atque quibusdam labore consectetur soluta reprehenderit alias magni facere minima blanditiis ex adipisci illum error vero. At distinctio autem doloribus vero blanditiis expedita laborum similique sapiente quod magni inventore animi suscipit nulla minima quibusdam. Sint ab itaque eos velit esse illo aut minima similique consectetur neque expedita odit alias animi doloribus fugit pariatur possimus. Cum nulla nam laborum deleniti amet sequi sapiente officiis voluptatem recusandae maxime nesciunt quibusdam explicabo eligendi. Perferendis dolor quidem fuga quibusdam earum veniam natus omnis magnam reiciendis eius quaerat eligendi doloribus fugit eos consequuntur quo tempore. Dolorem totam quaerat voluptatibus enim sequi eum magnam similique iure illo voluptas accusamus fugiat eaque quidem aperiam autem animi quod odio fugit porro aut culpa voluptates dicta.
+            </p>
+        </div>
+    </div>
+
+
+
+
+
+</body>
+</html>
